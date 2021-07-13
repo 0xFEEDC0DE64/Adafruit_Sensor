@@ -1,5 +1,7 @@
 #include "Adafruit_Sensor.h"
 
+#undef ARDUINO
+#ifdef ARDUINO
 /**************************************************************************/
 /*!
     @brief  Prints sensor information to serial console
@@ -76,3 +78,4 @@ void Adafruit_Sensor::printSensorDetails(void) {
   Serial.println(sensor.resolution);
   Serial.println(F("------------------------------------\n"));
 }
+#endif
